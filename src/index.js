@@ -183,7 +183,7 @@ const install = (Vue, options = {uidDomain: 'evildvl', prodId: 'vueICS'}) => {
     BEGIN:VCALENDAR
     PRODID:${options.prodId}
     VERSION:2.0
-    ${Events.join('\n')}
+    ${Events[Events.length - 1]}
     END:VCALENDAR
       
       `.replace(/^\s*[\r\n]/gm, "").replace(/^\s+/gm, ''))
